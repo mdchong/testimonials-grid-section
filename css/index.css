@@ -1,3 +1,165 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+body {
+  background-color: hsl(210, 46%, 95%);
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 0.813rem;
+  padding: 1.5rem;
+  margin: 0;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+main .card {
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+}
+main .card .header-group {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+main .card .header-group .user-img {
+  border-radius: 50%;
+  object-fit: cover;
+}
+main .card .header-group .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+main .card .header-group .user-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin: 0;
+  color: hsl(0, 0%, 100%);
+}
+main .card .header-group .verified {
+  margin: 0;
+  font-size: 0.75rem;
+  color: hsla(0, 0%, 100%, 0.5);
+}
+main .card .quote-ctn {
+  margin: 0;
+}
+main .card .quote-ctn .above {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: hsl(0, 0%, 100%);
+}
+main .card .quote-ctn .below {
+  color: hsla(0, 0%, 100%, 0.7);
+  line-height: 1.4;
+}
+main #daniel {
+  background-color: hsl(263, 55%, 52%);
+}
+main #jonathan {
+  background-color: hsl(217, 19%, 35%);
+}
+main #daniel .user-img, main #jonathan .user-img {
+  outline: 2px solid hsla(0, 0%, 100%, 0.5);
+}
+main #jeanette, main #kira {
+  background-color: hsl(0, 0%, 100%);
+}
+main #jeanette .user-name, main #jeanette .above, main #kira .user-name, main #kira .above {
+  color: hsl(217, 19%, 35%);
+}
+main #jeanette .verified, main #kira .verified {
+  color: hsla(219, 19%, 35%, 0.5);
+}
+main #jeanette .below, main #kira .below {
+  color: hsla(219, 19%, 35%, 0.7);
+}
+main #patrick {
+  background-color: hsl(219, 29%, 14%);
+}
+main #patrick .user-img {
+  outline: 2px solid hsl(263, 55%, 52%);
+}
 
 /*# sourceMappingURL=index.css.map */
