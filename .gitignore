@@ -15,3 +15,9 @@
 .DS_Store
 
 .prettierignore
+
+# Ignore .sass-cache directory
+.sass-cache/
+
+# Ignore node_modules (if using Node.js)
+node_modules/
